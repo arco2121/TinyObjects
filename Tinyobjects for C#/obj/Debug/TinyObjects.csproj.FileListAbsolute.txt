@@ -1,0 +1,6 @@
+C:\Users\colom\OneDrive\APP\TinyObjects\bin\Debug\TinyObjects.pdb
+C:\Users\colom\OneDrive\APP\TinyObjects\obj\Debug\TinyObjects.csproj.AssemblyReference.cache
+C:\Users\colom\OneDrive\APP\TinyObjects\obj\Debug\TinyObjects.csproj.CoreCompileInputs.cache
+C:\Users\colom\OneDrive\APP\TinyObjects\obj\Debug\TinyObjects.pdb
+C:\Users\colom\OneDrive\APP\TinyObjects\bin\Debug\TinyObjects.exe
+C:\Users\colom\OneDrive\APP\TinyObjects\obj\Debug\TinyObjects.exe
