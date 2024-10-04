@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq;
 
 namespace TinyObjects
 {
-    public class TinyArray
+    sealed class TinyArray
     {
         private object[] data { get; set; }
         private int _count { get; set; }
@@ -359,6 +360,40 @@ namespace TinyObjects
             catch
             {
                 throw new Exception("Index not found");
+            }
+        }
+
+        public void Reverse()
+        {
+            object[] array = new object[_capx];
+            int j = 0; ;
+            for (int i = data.Length;i >= 0;i--)
+            {
+                array[i] = data[i];
+                j++;
+            }
+            backup = data;
+            data = array;
+            return;
+        }
+
+        public void GoBack()
+        {
+            try
+            {
+                if (backup != null)
+                {
+                    data = backup;
+                    backup = null;
+                }
+                else
+                {
+                    throw new Exception("No Backup");
+                }
+            }
+            catch
+            {
+                throw new Exception("No Backup");
             }
         }
 

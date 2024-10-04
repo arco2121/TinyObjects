@@ -3,7 +3,7 @@ using TinyObjects;
 
 namespace TinyObjects
 {
-    public class TinyList<Tiny>
+    sealed class TinyList<Tiny>
     {
         private Tiny[] data { get; set; }
         private int _count { get; set; }
@@ -15,7 +15,7 @@ namespace TinyObjects
                 int i = 0;
                 foreach (var item in data)
                 {
-                    if (item != null)
+                    if (item.Equals(default(Tiny)))
                     { i++; }
                 }
                 return i;
@@ -119,8 +119,8 @@ namespace TinyObjects
         {
             try
             {
-                if (data[i] == null)
-                {
+                if (data[i].Equals(default(Tiny)))
+                    {
                     return default;
                 }
                 else
@@ -141,7 +141,7 @@ namespace TinyObjects
             {
                 for (int i = data.Length - 1; i >= 0; i--)
                 {
-                    if (data[i] != null)
+                    if (data.Equals(default(Tiny)))
                     {
                         data[i] = default;
                         _count = i;
@@ -159,7 +159,7 @@ namespace TinyObjects
         {
             try
             {
-                if (data[i] != null)
+                if (data[i].Equals(default(Tiny)))
                 {
                     data[i] = default;
                     _count = i;
@@ -229,7 +229,7 @@ namespace TinyObjects
                     {
                         IComparable mi1 = data[j] as IComparable;
                         IComparable mi2 = data[mi] as IComparable;
-                        if (mi1 != null && mi2 != null && mi2.CompareTo(mi1) > 0)
+                        if (!(mi1.Equals(default(Tiny))) && !(mi2.Equals(default(Tiny))) && mi2.CompareTo(mi1) > 0)
                         {
                             mi = j;
                         }
@@ -254,7 +254,7 @@ namespace TinyObjects
                     {
                         IComparable mi1 = data[j] as IComparable;
                         IComparable mi2 = data[mi] as IComparable;
-                        if (mi1 != null && mi2 != null && mi1.CompareTo(mi2) > 0)
+                        if (!(mi1.Equals(default(Tiny))) && !(mi2.Equals(default(Tiny))) && mi1.CompareTo(mi2) > 0)
                         {
                             mi = j;
                         }
@@ -293,8 +293,8 @@ namespace TinyObjects
         {
             foreach (var item in data)
             {
-               int index = IndexOf(item);
-                    action(item, index);
+                int index = IndexOf(item);
+                action(item, index);
             }
         }
 
@@ -303,7 +303,10 @@ namespace TinyObjects
             string k = "";
             foreach (var u in data)
             {
-                k += u.ToString() + "\n";
+                if (!u.Equals(default(Tiny)))
+                {
+                    k += u.ToString() + "\n";
+                }
             }
             return k;
         }
@@ -312,8 +315,11 @@ namespace TinyObjects
             Tiny[] temp = new Tiny[Count];
             int i = 0;
             For((value, index) => {
-                temp[i] = value;
-                i++;
+                if (!value.Equals(default(Tiny)))
+                {
+                    temp[i] = value;
+                    i++;
+                }
             });
 
             return temp;
