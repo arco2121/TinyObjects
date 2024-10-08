@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TinyObjects;
 
 namespace TinyObjects
 {
@@ -98,6 +99,28 @@ namespace TinyObjects
             }
             data = temp;
         }
+        private void _shift(int j)
+        {
+            _capx += 1;
+            object[] temp = new object[_capx];
+            int cherry = 0;
+            int k = 0;
+            for(var i = 0; i< data.Length; i++)
+            {
+                if (i == j && cherry <= 0)
+                {
+                    temp[k] = null;
+                    i--;
+                    cherry++;
+                }
+                else
+                {
+                    temp[k + cherry] = data[i]; ;
+                    k++;
+                }
+            }
+            data = temp;
+        }
 
         /*Aggiungi gli elementi*/
         public void Add(object ele)
@@ -123,7 +146,6 @@ namespace TinyObjects
                 return;
             }
             data[pos] = ele;
-            _count = pos;
             return;
         }
         public void Add(params object[] elems)
@@ -403,6 +425,12 @@ namespace TinyObjects
             object[] temp = new object[_capx];
             data = temp;
             _count = 0;
+        }
+
+        public void Insert(object ele, int pos)
+        {
+            _shift(pos);
+            Add(ele,pos);
         }
 
         /*For che scorre tutti gli elementi non nulli*/

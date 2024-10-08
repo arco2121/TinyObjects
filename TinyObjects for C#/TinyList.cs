@@ -80,6 +80,29 @@ namespace TinyObjects
             data = temp;
         }
 
+        private void _shift(int j)
+        {
+            _capx += 1;
+            Tiny[] temp = new Tiny[_capx];
+            int cherry = 0;
+            int k = 0;
+            for (var i = 0; i < data.Length; i++)
+            {
+                if (i == j && cherry <= 0)
+                {
+                    temp[k] = default(Tiny);
+                    i--;
+                    cherry++;
+                }
+                else
+                {
+                    temp[k + cherry] = data[i]; ;
+                    k++;
+                }
+            }
+            data = temp;
+        }
+
         /*Aggiungi gli elementi*/
         public void Add(Tiny ele)
         {
@@ -278,6 +301,12 @@ namespace TinyObjects
             {
                 throw new Exception("Index not found");
             }
+        }
+
+        public void Insert(Tiny ele, int pos)
+        {
+            _shift(pos);
+            Add(ele, pos);
         }
 
         public void Clear()
