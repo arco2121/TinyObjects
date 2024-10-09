@@ -1,0 +1,3 @@
+C:/Users/10934253/OneDrive/APP/TinyObjects/TinyObjects for C++/cmake-build-debug/CMakeFiles/TinyObjects_for_C__.dir
+C:/Users/10934253/OneDrive/APP/TinyObjects/TinyObjects for C++/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/10934253/OneDrive/APP/TinyObjects/TinyObjects for C++/cmake-build-debug/CMakeFiles/rebuild_cache.dir

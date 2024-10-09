@@ -9,10 +9,10 @@ class Program
 {
     static void Main()
     {
-        TinyChain<int> tiny = new TinyChain<int>(1,2,3,4,5,60);
+        TinyChain<int> tiny = new TinyChain<int>(1,2,3,4,5,4,4,60);
         tiny.AddAfter(tiny.Find(60),2);
         tiny.AddLast(120);
-        tiny.AddBefore(tiny.Find(60), 50);
+        tiny.RemoveFirst();
         Console.WriteLine(tiny.ToString());
         Console.ReadLine();
     }

@@ -1,0 +1,6 @@
+#ifndef TINYOBJECTS_FOR_C_LIBRARY_H
+#define TINYOBJECTS_FOR_C_LIBRARY_H
+
+void hello(void);
+
+#endif //TINYOBJECTS_FOR_C_LIBRARY_H

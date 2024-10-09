@@ -11,3 +11,9 @@ C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObje
 C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.csproj.CoreCompileInputs.cache
 C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.exe
 C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.pdb
+C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Debug\TinyObjects.exe
+C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Debug\TinyObjects.pdb
+C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.csproj.AssemblyReference.cache
+C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.csproj.CoreCompileInputs.cache
+C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.exe
+C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.pdb

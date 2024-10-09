@@ -1,0 +1,5 @@
+# ninja log v6
+12	1155	7501695652399770	CMakeFiles/TinyObjects_for_C__.dir/TinyList.cpp.obj	188990c4a2043036
+4	1404	7501695652315858	CMakeFiles/TinyObjects_for_C__.dir/TinyArray.cpp.obj	9c16e7e903613d92
+1404	1588	7501695667995920	libTinyObjects_for_C__.dll	ce92ee6c270d8012
+1404	1588	7501695667995920	libTinyObjects_for_C__.dll.a	ce92ee6c270d8012

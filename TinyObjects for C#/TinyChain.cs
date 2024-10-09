@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace TinyObjects
 {
@@ -131,6 +132,14 @@ namespace TinyObjects
 
         public void AddFirst(Tiny ele)
         {
+            if(_first == null)
+            {
+                var temp1 = new TinyNode<Tiny>(ele);
+                _first = temp1;
+                _last = temp1;
+                _count++;
+                return;
+            }
             var node = new TinyNode<Tiny>(ele);
             TinyNode<Tiny> temp = _first.Next;
             _first.Next = node;
@@ -139,6 +148,14 @@ namespace TinyObjects
         }
         public void AddLast(Tiny ele)
         {
+            if(_last == null)
+            {
+                var temp = new TinyNode<Tiny>(ele);
+                _first = temp;
+                _last = temp;
+                _count++;
+                return;
+            }
             var node = new TinyNode<Tiny>(ele);
             _last.Next = node;
             node.Next = null;
@@ -171,7 +188,105 @@ namespace TinyObjects
                 }
                 current = current.Next;
             }
-            return default;
+            return -1;
+        }
+
+        public bool Contains(Tiny Element)
+        {
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Element.Equals(Element))
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            return false;
+        }
+
+        public TinyNode<Tiny> FindLast(Tiny Element)
+        {
+            TinyList<TinyNode<Tiny>> io = new TinyList<TinyNode<Tiny>>();
+            TinyNode<Tiny> current = _first;
+            var t = 0;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Element.Equals(Element))
+                {
+                     t++;
+                     io.Add(current);
+                }
+                current = current.Next;
+            }
+
+            return io[t-1];
+        }
+
+        public void Remove(TinyNode<Tiny> node)
+        {
+            TinyNode<Tiny> current = _first;
+            for(int i = 0;i< _count; i++)
+            {
+                if(current.Next == node)
+                {
+                    current.Next = node.Next;
+                    node = null;
+                    _count--;
+                    return;
+                }
+                current = current.Next;
+            }
+            throw new Exception("Not found");
+        }
+        public void Remove(Tiny nodes)
+        {
+            TinyNode<Tiny> node = Find(nodes);
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Next == node)
+                {
+                    current.Next = node.Next;
+                    node = null;
+                    _count--;
+                    return;
+                }
+                current = current.Next;
+            }
+            throw new Exception("Not found");
+        }
+
+        public void RemoveFirst()
+        {
+            if (_first == null)
+            {
+                return;
+            }
+            _first = _first.Next;
+            _count--;
+        }
+
+        public void RemoveLast()
+        {
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Next == _last)
+                {
+                    _last = current;
+                    _count--;
+                    return;
+                }
+                current = current.Next;
+            }
+        }
+
+        public void Clear()
+        {
+            _first = null;
+            _last = null;
+            _count = 0;
         }
 
         public override string ToString()
