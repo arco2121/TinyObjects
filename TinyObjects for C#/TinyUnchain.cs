@@ -208,20 +208,18 @@ namespace TinyObjects
 
         public TinyNode FindLast(object Element)
         {
-            TinyList<TinyNode> io = new TinyList<TinyNode>();
+            TinyNode cherry = null;
             TinyNode current = _first;
-            var t = 0;
             for (int i = 0; i < _count; i++)
             {
                 if (current.Element.Equals(Element))
                 {
-                    t++;
-                    io.Add(current);
+                    cherry = current;
                 }
                 current = current.Next;
             }
 
-            return io[t - 1];
+            return cherry;
         }
 
         public void Remove(TinyNode node)
