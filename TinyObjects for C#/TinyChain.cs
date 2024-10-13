@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Xml.Linq;
 
 namespace TinyObjects
 {
@@ -18,6 +17,20 @@ namespace TinyObjects
         }
         private TinyNode<Tiny> _first { get; set; }
         private TinyNode<Tiny> _last { get; set; }
+        public TinyNode<Tiny> First
+        {
+            get
+            {
+                return _first;
+            }
+        }
+        public TinyNode<Tiny> Last 
+        { 
+            get
+            {
+                return _last;
+            }
+        }
         private int _count { get; set; }
         public int Count { 
             get 
@@ -141,8 +154,8 @@ namespace TinyObjects
                 return;
             }
             var node = new TinyNode<Tiny>(ele);
-            TinyNode<Tiny> temp = _first.Next;
-            _first.Next = node;
+            TinyNode<Tiny> temp = _first;
+            _first = node;
             node.Next = temp;
             _count++;
         }
@@ -207,20 +220,18 @@ namespace TinyObjects
 
         public TinyNode<Tiny> FindLast(Tiny Element)
         {
-            TinyList<TinyNode<Tiny>> io = new TinyList<TinyNode<Tiny>>();
+            TinyNode<Tiny> temp = _first;
             TinyNode<Tiny> current = _first;
-            var t = 0;
             for (int i = 0; i < _count; i++)
             {
                 if (current.Element.Equals(Element))
                 {
-                     t++;
-                     io.Add(current);
+                     temp = current;
                 }
                 current = current.Next;
             }
 
-            return io[t-1];
+            return temp;
         }
 
         public void Remove(TinyNode<Tiny> node)

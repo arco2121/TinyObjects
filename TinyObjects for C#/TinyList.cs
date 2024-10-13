@@ -2,7 +2,7 @@
 
 namespace TinyObjects
 {
-    sealed class TinyList<Tiny>
+    public class TinyList<Tiny>
     {
         private Tiny[] data { get; set; }
         private int _count { get; set; }

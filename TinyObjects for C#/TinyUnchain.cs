@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Xml.Linq;
 
 namespace TinyObjects
 {
-    sealed class TinyUnchain
+    public class TinyUnchain
     {
         internal sealed class TinyNode
         {
@@ -18,6 +17,20 @@ namespace TinyObjects
         }
         private TinyNode _first { get; set; }
         private TinyNode _last { get; set; }
+        public TinyNode First
+        {
+            get
+            {
+                return _first;
+            }
+        }
+        private TinyNode Last
+        {
+            get
+            {
+                return _last;
+            }
+        }
         private int _count { get; set; }
         public int Count
         {
@@ -142,8 +155,8 @@ namespace TinyObjects
                 return;
             }
             var node = new TinyNode(ele);
-            TinyNode temp = _first.Next;
-            _first.Next = node;
+            TinyNode temp = _first;
+            _first = node;
             node.Next = temp;
             _count++;
         }
