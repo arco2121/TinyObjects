@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}|TinyObjects.csproj|C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}|TinyObjects.csproj|c:\\users\\abcia\\documents\\school\\informatica\\c#\\tinylist\\tinyobjects for c#\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}|TinyObjects.csproj|solutionrelative:test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}|TinyObjects.csproj|c:\\users\\abcia\\documents\\school\\informatica\\c#\\tinylist\\tinyobjects for c#\\tinyunchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}|TinyObjects.csproj|solutionrelative:tinyunchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}|TinyObjects.csproj|C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\tinychain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TinyUnchain.cs",
-              "DocumentMoniker": "C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\TinyUnchain.cs",
-              "RelativeDocumentMoniker": "TinyUnchain.cs",
-              "ToolTip": "C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\TinyUnchain.cs",
-              "RelativeToolTip": "TinyUnchain.cs",
-              "ViewState": "AgIAADMBAAAAAAAAAAAqwEEBAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T16:44:15.64Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,20 +28,20 @@
               "RelativeDocumentMoniker": "Test.cs",
               "ToolTip": "C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\Test.cs",
               "RelativeToolTip": "Test.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAADwv2kAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T15:04:23.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TinyChain.cs",
               "DocumentMoniker": "C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\TinyChain.cs",
               "RelativeDocumentMoniker": "TinyChain.cs",
               "ToolTip": "C:\\Users\\abcia\\Documents\\School\\Informatica\\C#\\TinyList\\TinyObjects for C#\\TinyChain.cs",
               "RelativeToolTip": "TinyChain.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAQwLwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAUwKoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T14:56:14.004Z",
               "EditorCaption": ""

@@ -1,62 +1,4 @@
-﻿/*using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TinyObjects;
-
-class Program
-{
-    static void Main()
-    {
-        Maintester tester = new Maintester();
-        int[] FunzioniDiTesting = {0};
-        tester.MainTester(FunzioniDiTesting);
-
-        Console.ReadLine();
-    }
-}
-
-class Maintester
-{
-    public Maintester()
-    {
-
-    }
-    Metodi di testing
-
-    public void MainTester(int[] ints)
-    {
-        foreach (int i in ints)
-        {
-            switch (i)
-            {
-                case 0:
-                    Console.WriteLine(BasicsTest(new TinyChain<int>(1, 2, 3, 4, 5, 4, 4, 60), 8));
-
-                    break;
-
-                default: break;
-            }
-        }
-    }
-
-    Creazione Lista e Indice
-    bool BasicsTest(TinyChain<int> tiny, int ExpectedCount)
-    {
-        if (tiny == null)
-        {
-            return false;
-        }
-        if (tiny.Count == ExpectedCount)
-        {
-            return true;
-        }
-
-        return false;
-    }
-}*/
-using System;
+﻿using System;
 
 namespace TinyObjects
 {
@@ -92,16 +34,28 @@ namespace TinyObjects
             Console.WriteLine("TestAddAfter completato.\n");
         }
 
-        /* Adding After */
+        /* Adding After Broken */
+        static void TestAddAfterBroken()
+        {
+            Console.WriteLine("TestAddAfterBroken:");
+
+            TinyChain<int> chain = new TinyChain<int>(0, 10, 20);
+            chain.AddAfter(10, 15);
+            Assert(chain[2] == 15, $"Errore: Elemento aggiunto correttamente");
+
+            Console.WriteLine("TestAddAfter completato.\n");
+        }
+
+        /* Adding Before */
         static void TestAddBefore()
         {
             Console.WriteLine("TestAddBefore:");
 
             TinyChain<int> chain = new TinyChain<int>(0, 10, 20);
-            chain.AddBefore(20, 15);
-            Assert(chain[2] == 15, $"Errore: Elemento non aggiunto correttamente");
+            chain.AddBefore(10, 15);
+            Assert(chain[2] != 15, $"Errore: Elemento aggiunto correttamente");
 
-            Console.WriteLine("TestAddBefore completato.\n");
+            Console.WriteLine("TestAddBefore fallito correttamente.\n");
         }
 
 
