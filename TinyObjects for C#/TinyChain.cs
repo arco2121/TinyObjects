@@ -4,6 +4,7 @@ namespace TinyObjects
 {
     sealed class TinyChain<Tiny>
     {
+        /* Node Class */
         internal sealed class TinyNode<TinyIn>
         {
             public TinyIn Element { get; set; }
@@ -15,6 +16,9 @@ namespace TinyObjects
                 Next = null;
             }
         }
+
+
+        /* Propieties */
         private TinyNode<Tiny> _first { get; set; }
         private TinyNode<Tiny> _last { get; set; }
         public TinyNode<Tiny> First
@@ -69,13 +73,14 @@ namespace TinyObjects
             }
         }
 
+
+        /* Constructors */
         public TinyChain()
         {
             _first = null;
             _last = null;
             _count = 0;
         }
-        
         public TinyChain(params Tiny[] elems)
         {
             for(int i = 0; i < elems.Length; i++)
@@ -94,7 +99,8 @@ namespace TinyObjects
             }
         }
 
-        /*Aggiungi*/
+
+        /* Adding */
         public void AddAfter(TinyNode<Tiny> where, Tiny ele)
         {
             try
@@ -115,7 +121,27 @@ namespace TinyObjects
                 throw new Exception("Not found");
             }
         }
-
+        public void AddAfter(Tiny where, Tiny ele)
+        {
+            try
+            {
+                if (where.Equals(_last))
+                {
+                    AddLast(ele);
+                    return;
+                }
+                var node = new TinyNode<Tiny>(ele);
+                TinyNode<Tiny> whereNode = Find(where);
+                TinyNode<Tiny> temp = whereNode.Next;
+                whereNode.Next = node;
+                node.Next = temp;
+                _count++;
+            }
+            catch
+            {
+                throw new Exception("Not found");
+            }
+        }
         public void AddBefore(TinyNode<Tiny> where, Tiny ele)
         {
             try
@@ -142,7 +168,33 @@ namespace TinyObjects
                 throw new Exception("Not found");
             }
         }
-
+        public void AddBefore(Tiny where, Tiny ele)
+        {
+            try
+            {
+                TinyNode<Tiny> node = new TinyNode<Tiny>(ele);
+                TinyNode<Tiny> whereNode = Find(where);
+                if (whereNode.Equals(_first))
+                {
+                    node.Next = _first;
+                    _first = node;
+                    _count++;
+                    return;
+                }
+                TinyNode<Tiny> current = _first;
+                while (current != null && current.Next != whereNode)
+                {
+                    current = current.Next;
+                }
+                node.Next = whereNode;
+                current.Next = node;
+                _count++;
+            }
+            catch
+            {
+                throw new Exception("Not found");
+            }
+        }
         public void AddFirst(Tiny ele)
         {
             if(_first == null)
@@ -176,70 +228,14 @@ namespace TinyObjects
             _count++;
         }
 
-        public TinyNode<Tiny> Find(Tiny Element)
-        {
-            TinyNode<Tiny> current = _first;
-            for (int i = 0; i < _count; i++)
-            {
-                if (current.Element.Equals(Element))
-                {
-                    return current;
-                }
-                current = current.Next;
-            }
-            return default;
-        }
 
-        public int IndexOf(Tiny Element)
-        {
-            TinyNode<Tiny> current = _first;
-            for (int i = 0; i < _count; i++)
-            {
-                if (current.Element.Equals(Element))
-                {
-                    return i;
-                }
-                current = current.Next;
-            }
-            return -1;
-        }
-
-        public bool Contains(Tiny Element)
-        {
-            TinyNode<Tiny> current = _first;
-            for (int i = 0; i < _count; i++)
-            {
-                if (current.Element.Equals(Element))
-                {
-                    return true;
-                }
-                current = current.Next;
-            }
-            return false;
-        }
-
-        public TinyNode<Tiny> FindLast(Tiny Element)
-        {
-            TinyNode<Tiny> temp = _first;
-            TinyNode<Tiny> current = _first;
-            for (int i = 0; i < _count; i++)
-            {
-                if (current.Element.Equals(Element))
-                {
-                     temp = current;
-                }
-                current = current.Next;
-            }
-
-            return temp;
-        }
-
+        /* Remove */
         public void Remove(TinyNode<Tiny> node)
         {
             TinyNode<Tiny> current = _first;
-            for(int i = 0;i< _count; i++)
+            for (int i = 0; i < _count; i++)
             {
-                if(current.Next == node)
+                if (current.Next == node)
                 {
                     current.Next = node.Next;
                     node = null;
@@ -267,7 +263,6 @@ namespace TinyObjects
             }
             throw new Exception("Not found");
         }
-
         public void RemoveFirst()
         {
             if (_first == null)
@@ -277,7 +272,6 @@ namespace TinyObjects
             _first = _first.Next;
             _count--;
         }
-
         public void RemoveLast()
         {
             TinyNode<Tiny> current = _first;
@@ -292,7 +286,6 @@ namespace TinyObjects
                 current = current.Next;
             }
         }
-
         public void Clear()
         {
             _first = null;
@@ -300,6 +293,62 @@ namespace TinyObjects
             _count = 0;
         }
 
+
+        /* Access */
+        public TinyNode<Tiny> Find(Tiny Element)
+        {
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Element.Equals(Element))
+                {
+                    return current;
+                }
+                current = current.Next;
+            }
+            return default;
+        }
+        public int IndexOf(Tiny Element)
+        {
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Element.Equals(Element))
+                {
+                    return i;
+                }
+                current = current.Next;
+            }
+            return -1;
+        }
+        public bool Contains(Tiny Element)
+        {
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Element.Equals(Element))
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            return false;
+        }
+        public TinyNode<Tiny> FindLast(Tiny Element)
+        {
+            TinyNode<Tiny> temp = _first;
+            TinyNode<Tiny> current = _first;
+            for (int i = 0; i < _count; i++)
+            {
+                if (current.Element.Equals(Element))
+                {
+                     temp = current;
+                }
+                current = current.Next;
+            }
+
+            return temp;
+        }
         public override string ToString()
         {
             string temp = "";

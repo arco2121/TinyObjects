@@ -1,10 +1,10 @@
 ﻿using System;
 
 namespace TinyObjects
-{
+{/*
     public class TinyUnchain
     {
-        internal sealed class TinyNode
+        public sealed class TinyNode
         {
             public object Element { get; set; }
             public TinyNode Next { get; set; }
@@ -95,7 +95,7 @@ namespace TinyObjects
             }
         }
 
-        /*Aggiungi*/
+        //Aggiungi
         public void AddAfter(TinyNode where, object ele)
         {
             try
@@ -319,5 +319,5 @@ namespace TinyObjects
             }
             return temp;
         }
-    }
+    }*/
 }
