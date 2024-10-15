@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace TinyObjects
-{/*
+{
     public class TinyUnchain
     {
         public sealed class TinyNode
@@ -319,5 +319,5 @@ namespace TinyObjects
             }
             return temp;
         }
-    }*/
+    }
 }
