@@ -2,10 +2,10 @@
 
 namespace TinyObjects
 {
-    sealed class TinyChain<Tiny>
+    public sealed class TinyChain<Tiny>
     {
         /* Node Class */
-        internal sealed class TinyNode<TinyIn>
+        public sealed class TinyNode<TinyIn>
         {
             public TinyIn Element { get; set; }
             public TinyNode<TinyIn> Next { get; set; }
