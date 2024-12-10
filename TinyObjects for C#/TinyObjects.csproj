@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C7977D19-C0DA-4E74-AEBB-BFAC169F0D74}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TinyObjects</RootNamespace>
     <AssemblyName>TinyObjects</AssemblyName>
@@ -66,6 +66,7 @@
     <Compile Include="TinyChain.cs" />
     <Compile Include="TinyList.cs" />
     <Compile Include="TinyMap.cs" />
+    <Compile Include="TinyMineap.cs" />
     <Compile Include="TinyStack.cs" />
     <Compile Include="TinyUnchain.cs" />
   </ItemGroup>

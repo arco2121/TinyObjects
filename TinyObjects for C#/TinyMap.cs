@@ -9,10 +9,13 @@ namespace TinyObjects
             public object _data { get; set; }
             public object _key { get; set; }
 
+            public TinyUnity _next { get; set; }
+
             public TinyUnity(object key, object data)
             {
                 _key = key;
                 _data = data;
+                _next = null;
             }
         }
         public int Count

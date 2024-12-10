@@ -6,7 +6,7 @@ namespace TinyObjects
     {
         static void Main(string[] args)
         {
-            TestAddAfter();
+            /*TestAddAfter();
             TestAddBefore();
             TestAddFirst();
             TestAddAfterBroken();
@@ -19,12 +19,15 @@ namespace TinyObjects
             TestRemoveLast();
             TestClear();
             TestToString();
+            Console.ReadLine();*/
+            TinyMineap<int> o = new TinyMineap<int>(4);
+            o.Add(12);
             Console.ReadLine();
         }
 
 
         /* Adding After */
-        static void TestAddAfter()
+            static void TestAddAfter()
         {
             Console.WriteLine("TestAddAfter:");
 
