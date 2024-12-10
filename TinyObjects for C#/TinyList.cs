@@ -45,6 +45,12 @@ namespace TinyObjects
             _capx = 0;
             data = new Tiny[_capx];
         }
+        public TinyList(int capa)
+        {
+            _count = 0;
+            _capx = capa;
+            data = new Tiny[_capx];
+        }
         public TinyList(params Tiny[] input)
         {
             _count = 0;

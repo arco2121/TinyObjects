@@ -8,6 +8,5 @@ C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Release\TinyOb
 C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Release\TinyObjects.pdb
 C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Release\TinyObjects.exe
 C:\Users\colom\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Release\TinyObjects.exe
-C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Release\TinyObjects.exe
-C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Release\TinyObjects.csproj.SuggestedBindingRedirects.cache
-C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Release\TinyObjects.exe
+C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Release\TinyObjects.dll
+C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Release\TinyObjects.dll

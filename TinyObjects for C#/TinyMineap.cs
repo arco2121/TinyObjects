@@ -75,6 +75,14 @@ namespace TinyObjects
             return _data[1];
         }
 
+        public void For(Action<Tiny> action)
+        {
+            foreach (var item in _data)
+            {
+                action(item);
+            }
+        }
+
         private void _upHeap(int i)
         {
             while (i > 1)

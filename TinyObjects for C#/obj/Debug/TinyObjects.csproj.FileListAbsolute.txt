@@ -20,6 +20,5 @@ C:\Users\abcia\Documents\School\Informatica\C#\TinyList\TinyObjects for C#\obj\D
 C:\Users\abcia\Documents\School\Informatica\C#\TinyList\TinyObjects for C#\obj\Debug\TinyObjects.pdb
 C:\Users\abcia\Documents\School\Informatica\C#\TinyList\TinyObjects for C#\bin\Debug\TinyObjects.exe
 C:\Users\abcia\Documents\School\Informatica\C#\TinyList\TinyObjects for C#\bin\Debug\TinyObjects.pdb
-C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Debug\TinyObjects.exe
-C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.csproj.SuggestedBindingRedirects.cache
-C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.exe
+C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\bin\Debug\TinyObjects.dll
+C:\Users\10934253\OneDrive\APP\TinyObjects\TinyObjects for C#\obj\Debug\TinyObjects.dll
